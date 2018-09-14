@@ -1,0 +1,227 @@
+@import "~antd/lib/style/themes/default.less";
+@ease-in-out-circ: cubic-bezier(.78, .14, .15, .86);
+.bdpModal {
+  // background: #fff;
+  top:0;
+  height: 100vh;
+  display: flex;
+  padding:0;
+  padding-left: 400px;
+  width: auto !important;
+  :global {
+    .ant-modal-content {
+      display: flex;
+      flex:1;
+      flex-direction:column;
+      .ant-modal-body {
+        flex:1;
+        // padding-top:100px;
+      }
+    }
+  }
+}
+.top {
+  position: absolute;
+  background: #1A2334;
+  left:0;
+  right:0;
+  z-index: 100;
+  p{
+    font-size: 14px;
+    font-family: PingFangSCBold;
+    display: inline-block;
+    padding: 3px 28px;
+    margin: 16px 10px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 14px;
+    border-right: 1px solid #4e4e4e;
+  }
+}
+:global {
+  button.bdpDiv {
+    cursor: pointer;
+  }
+  .bdpDiv {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-radius: 3px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 24px;
+    border:none;
+    margin:0;
+    i.anticon {
+      padding: 3px 10px;
+      // font-size: 18px;
+    }
+    span{
+      padding-right: 10px;
+    }
+  }
+}
+.titleDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left:20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  :global {
+    .left{
+      flex:1;
+      display: flex;
+    }
+
+  }
+}
+.layout {   
+  position: absolute;
+  width: auto;
+  top: 70px;
+  overflow: visible;
+  height: calc(~"100vh - 64px");
+  background-color: #1A2334;
+  opacity: 0.9;
+  min-height: calc(~"100vh - 64px");
+  box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+  z-index: 999;
+  :global {
+    .ant-divider-inner-text {
+      color: #fff;
+    }
+    .ant-tabs-ink-bar{
+      background-color: transparent !important; 
+    }
+    .basicLayout {
+      padding-top: 39px;
+      &.display {
+        width: 0;
+      }
+      transition: width 1s ease;
+      height: calc(~"100vh - 64px");
+      overflow-x: scroll;
+      width: 368px;
+    }
+    .after {
+      position: absolute;
+      top:50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:before{
+        content:' ';
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid rgba(24, 24, 54, 0.9);
+        transform: perspective(.5em) rotateY(5deg);
+        background: rgba(24, 24, 54, 0.9);
+        z-index: -1;
+      }
+      .anticon {
+        color: #fff;
+      }
+      right: 0;
+      transform: translate( 100%, -50%);
+      width: 22px;
+      height: 68px;
+    }
+  }
+}
+.tabsCard {
+  background: transparent;
+  :global {
+    .ant-card-head {
+      background: transparent;
+    }
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-tabs-content {
+      // display: none;
+      visibility: hidden;
+      height: 0;
+    }
+    .ant-tabs-nav {
+      display: felx;
+      justify-content: center;
+    }
+    .ant-tabs-tab {
+      color: #999;
+      &.ant-tabs-tab-active{
+        color: #fff;
+      }
+    }
+    .ant-card-head {
+      padding: 0 16px;
+    }
+  }
+}
+.bdpTable {
+  table {
+    color: #fff;
+    tr:nth-child(odd) {
+      background: rgba(255,255,255,0.1);
+    }
+    tr:hover{
+      td {
+        background: rgba(255,255,255,0.1);
+      }
+    }
+    td {
+      font-size: 12px;
+      padding: 3px 32px !important;
+      border: none !important;
+    }
+  }
+  :global {
+    .ant-table-placeholder{
+      background: transparent;
+      color: #fff;
+    }
+  }
+}
+.icon {
+  width: 14px;
+  margin-right: 10px;
+}
+
+:global {
+  .cTabs {
+    overflow: visible;
+    .ant-tabs-bar {
+      border:none;
+    }
+    .ant-tabs-nav-wrap {
+      display: flex;
+      justify-content: center;
+      .ant-tabs-tab {
+        color:#999;
+        margin-bottom: 1px !important;
+        border: 1px solid #8B9AB2;
+        box-shadow: 0 0 2px 0 rgba(255,255,255,0.50);
+        border-radius: 3px 0 0 3px;
+        margin:0;
+        font-size: 12px;
+        padding: 3px 15px;
+        &~.ant-tabs-tab {
+          border-left: none;
+        }
+        &.ant-tabs-tab-active {
+          border-color: #fff;
+        }
+      }
+      .ant-tabs-tab-active {
+        color: #fff;
+      }
+    }
+  }
+  .drawer .drawer-content {
+    background: #001529;
+  }
+}
